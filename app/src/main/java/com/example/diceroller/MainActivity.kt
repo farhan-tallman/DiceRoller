@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
-import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,9 +23,16 @@ class MainActivity : AppCompatActivity() {
         // Create a Dice object and roll it
         val dice = Dice(6)
         val diceRoll = dice.roll()
+
+        val dice2 = Dice(6)
+        val diceRoll2 = dice2.roll()
+
         // Update the screen with the value of the dice
         val resultText: TextView = findViewById(R.id.textView)
         resultText.text = diceRoll.toString()
+
+        val resultText2: TextView =  findViewById(R.id.textView2)
+        resultText2.text = diceRoll2.toString()
 
     }
 }
